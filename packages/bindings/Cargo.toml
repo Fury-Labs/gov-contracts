@@ -1,9 +1,9 @@
 [package]
-name = "comdex-bindings"
+name = "fury-bindings"
 version = "0.6.0"
-authors = ["Comdex"]
+authors = ["Fury"]
 edition = "2018"
-description = "Bindings for CustomMsg and CustomQuery for the Comdex blockchain"
+description = "Bindings for CustomMsg and CustomQuery for the Fury blockchain"
 
 
 [dependencies]

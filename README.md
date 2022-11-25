@@ -2,7 +2,7 @@
 
 This is a base implementation of governance contract for Harbor Protocol . The contract can be extended to be used by other protocol with relatively same proposal execution behaviour.
 
-The contract uses the binding from package/bindings in the root directory to interact with Comdex Native Modules for Queries and Messages.
+The contract uses the binding from package/bindings in the root directory to interact with Fury Native Modules for Queries and Messages.
 
 ## Instantiate Operation
 
@@ -62,7 +62,7 @@ may be active and raising another will result in an error.
 pub struct Propose {
     pub title: String,
     pub description: String,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     pub latest: Option<Expiration>,
     pub app_id_param: u64,
 }
@@ -194,7 +194,7 @@ ProposalResponseTotal {
     pub description: String,
     pub start_height: u64,
     pub expires: Expiration,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     pub status: Status,
     pub duration: Duration,
     /// pass requirements
@@ -216,7 +216,7 @@ ProposalResponseTotal {
 * `start_height` - Block height at which proposal was raised.
 * `expires` - Expiration time of the proposal. May be less than or equal to the
 max voting period.
-* `msgs` - Comdex Message which will be forwarded to the chain to implement the
+* `msgs` - Fury Message which will be forwarded to the chain to implement the
 proposal changes.
 * `status` - Current status of the proposal.
 For example, Open, Pending, etc.
@@ -254,7 +254,7 @@ ProposalResponse {
     pub id: u64,
     pub title: String,
     pub description: String,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     pub status: Status,
     pub expires: Expiration,
     pub threshold: ThresholdResponse,
@@ -264,7 +264,7 @@ ProposalResponse {
 * `id` - Unique ID of the proposal.
 * `title` - Title of the proposal.
 * `description` - Description of the proposal.
-* `msgs` - Comdex Message which will be forwarded to the chain to implement the
+* `msgs` - Fury Message which will be forwarded to the chain to implement the
 proposal changes.
 * `status` - Current status of the proposal state.
 * `expires` - Expiration time of the proposal. May be less than or equal to the

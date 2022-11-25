@@ -153,8 +153,8 @@
         }
       }
     },
-    "ComdexMessages": {
-      "description": "A number of Custom messages that can call into the Comdex bindings",
+    "FuryMessages": {
+      "description": "A number of Custom messages that can call into the Fury bindings",
       "oneOf": [
         {
           "type": "object",
@@ -888,7 +888,7 @@
         "msgs": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ComdexMessages"
+            "$ref": "#/definitions/FuryMessages"
           }
         },
         "title": {

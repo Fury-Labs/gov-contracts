@@ -1,9 +1,9 @@
 [package]
 name = "governance"
 version = "0.13.2"
-authors = ["Comdex"]
+authors = ["Fury"]
 edition = "2018"
-description = "Comdex Governance Contract"
+description = "Fury Governance Contract"
 
 
 [profile.release]
@@ -31,7 +31,7 @@ cosmwasm-std = { version = "1.0.0" }
 schemars = "0.8.1"
 serde = { version = "1.0.103", default-features = false, features = ["derive"] }
 thiserror = { version = "1.0.23" }
-comdex-bindings = { version = "0.6.0", path = "../../packages/bindings" }
+fury-bindings = { version = "0.6.0", path = "../../packages/bindings" }
 
 [dev-dependencies]
 cosmwasm-schema = { version = "1.0.0" }

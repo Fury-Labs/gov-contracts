@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 #[serde(rename_all = "snake_case")]
-pub enum ComdexQuery {
+pub enum FuryQuery {
     TotalSupply {
         app_id: u64,
         asset_id: u64,
@@ -80,7 +80,7 @@ pub enum ComdexQuery {
     },
 }
 
-impl CustomQuery for ComdexQuery {}
+impl CustomQuery for FuryQuery {}
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
 #[serde(rename_all = "snake_case")]

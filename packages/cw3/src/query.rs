@@ -1,4 +1,4 @@
-use comdex_bindings::ComdexMessages;
+use fury_bindings::FuryMessages;
 use cw_utils::{Expiration, ThresholdResponse};
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
@@ -55,7 +55,7 @@ pub struct ProposalResponse {
     pub id: u64,
     pub title: String,
     pub description: String,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     pub status: Status,
     pub expires: Expiration,
     /// This is the threshold that is applied to this proposal. Both the rules of the voting contract,

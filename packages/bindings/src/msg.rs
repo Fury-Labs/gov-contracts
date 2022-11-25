@@ -4,8 +4,8 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
 #[serde(rename_all = "snake_case")]
-/// A number of Custom messages that can call into the Comdex bindings
-pub enum ComdexMessages {
+/// A number of Custom messages that can call into the Fury bindings
+pub enum FuryMessages {
     MsgWhiteListAssetLocker {
         app_id: u64,
         asset_id: u64,
@@ -117,10 +117,10 @@ pub enum ComdexMessages {
     },
 }
 
-impl From<ComdexMessages> for CosmosMsg<ComdexMessages> {
-    fn from(msg: ComdexMessages) -> CosmosMsg<ComdexMessages> {
+impl From<FuryMessages> for CosmosMsg<FuryMessages> {
+    fn from(msg: FuryMessages) -> CosmosMsg<FuryMessages> {
         CosmosMsg::Custom(msg)
     }
 }
 
-impl CustomMsg for ComdexMessages {}
+impl CustomMsg for FuryMessages {}

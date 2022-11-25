@@ -1,6 +1,6 @@
 use std::ops::Mul;
 
-use comdex_bindings::ComdexMessages;
+use fury_bindings::FuryMessages;
 use cosmwasm_std::{Addr, BlockInfo, Coin, Decimal, StdResult, Storage, Timestamp, Uint128};
 use cw3::{Status, Vote};
 use cw_storage_plus::{Item, Map};
@@ -50,7 +50,7 @@ pub struct Proposal {
     pub description: String,
     pub start_height: u64,
     pub expires: Expiration,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     pub status: Status,
     pub duration: Duration,
     /// pass requirements

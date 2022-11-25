@@ -1,5 +1,5 @@
 use crate::state::Votes;
-use comdex_bindings::ComdexMessages;
+use fury_bindings::FuryMessages;
 use cosmwasm_std::{Addr, Decimal, Timestamp, Uint128};
 use cw3::{Status, Vote};
 use cw_utils::{Duration, Expiration, Threshold};
@@ -27,7 +27,7 @@ pub struct ProposalResponseTotal {
     pub description: String,
     pub start_height: u64,
     pub expires: Expiration,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     pub status: Status,
     pub duration: Duration,
     /// pass requirements
@@ -45,7 +45,7 @@ pub struct ProposalResponseTotal {
 pub struct Propose {
     pub title: String,
     pub description: String,
-    pub msgs: Vec<ComdexMessages>,
+    pub msgs: Vec<FuryMessages>,
     // note: we ignore API-spec'd earliest if passed, always opens immediately
     pub latest: Option<Expiration>,
     pub app_id_param: u64,
